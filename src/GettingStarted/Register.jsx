@@ -1,6 +1,6 @@
 const Register = ({toggleRegister}) => {
     return (
-      <div className="absolute flex flex-col justify-center items-center min-h-screen bg-white">
+      <div className="relative flex flex-col justify-center items-center min-h-screen bg-white">
         <div className="absolute top-4 left-4">
           <button className="text-gray-400 hover:text-gray-600" onClick={toggleRegister}>
             <svg
