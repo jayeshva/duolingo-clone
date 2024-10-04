@@ -73,7 +73,6 @@ const LearnSounds = () => {
 
   return (
     <div className="flex flex-col items-center">
-      {/* Title and Subtitle */}
       <div className="flex flex-col items-center p-8 ml-6">
         <h1 className="text-2xl md:text-3xl font-bold mb-4 font-din-round text-[#4B4B4B] text-center">
           {title}
@@ -89,7 +88,6 @@ const LearnSounds = () => {
         </button>
       </div>
 
-      {/* Sections */}
       {sections.map((section, index) => (
         <div key={index} className="w-full text-center max-w-4xl ml-8">
           
@@ -100,7 +98,6 @@ const LearnSounds = () => {
             </h2>
             <div className="border-t-2 opacity-60 border-gray-300 w-full mx-2 mr-14"></div>
           </div>
-          {/* Grid with 3 columns */}
           <div className="grid w-[478px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 ml-4 mt-4 mb-5">
             {section.items.map((item, idx) => (
               <SoundCard key={idx} symbol={item.symbol} word={item.word} />
