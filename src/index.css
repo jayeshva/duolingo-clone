@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4F46E5; 
+  --secondary-color: #6B7280;
+  --background-color: #FFFFFF; 
+  --hover-bg-color: #F9FAFB; 
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+  font-family: 'din-round';
+  src: url('/public/fonts/DINRoundPro-Bold.woff2') format('woff2'),
+       url('/public/fonts/DINRoundPro-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'din-round-light';
+  src: url('/public/fonts/DINRoundPro.woff2') format('woff2'),
+       url('/public/fonts/DINRoundPro.woff') format('woff');
+}
