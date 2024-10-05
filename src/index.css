@@ -3,11 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #4F46E5; 
-  --secondary-color: #6B7280;
-  --background-color: #FFFFFF; 
-  --hover-bg-color: #F9FAFB; 
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --tile-green: #58CC05;
+  --tile-green-shadow: #47A30B;
+
+  --tile-purple: #CE82FF;
+  --tile-purple-shadow: #A567CC;
+
+  --tile-caribbean-green: #04CD9C;
+  --tile-caribbean-green-shadow: #09A47D;
+
+  --tile-pink: #FF86D0;
+  --tile-pink-shadow: #CC6BA7;
+
+  --tile-orange: #FF9601;
+  --tile-orange-shadow: #CD7808;
+
+  --tile-red: #FF4B4B;
+  --tile-red-shadow: #CD3D3C;
+
+  --tile-blue: #1CB0F6;
+  --tile-blue-shadow: #198CC5;
+
+  --tile-grey: #D1D5DB;
+  --tile-grey-shadow: #B7B7B7;
 }
 
 @font-face {
@@ -20,4 +38,13 @@
   font-family: 'din-round-light';
   src: url('/public/fonts/DINRoundPro.woff2') format('woff2'),
        url('/public/fonts/DINRoundPro.woff') format('woff');
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);  /* Initial position */
+  }
+  50% {
+    transform: translateY(-10px);  /* Move up by 10px */
+  }
 }

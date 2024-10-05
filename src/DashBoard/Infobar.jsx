@@ -11,7 +11,7 @@ function Infobar() {
   };
 
   return (
-    <div className="flex-col p-4 pt-1 pl-0 w-[380px] fixed top-5 right-28 h-screen overflow-auto">
+    <aside className="flex-col p-4 pt-1 pl-0 w-[380px] fixed top-5 right-28 h-screen overflow-auto">
       {showRegister ? (
         <Register toggleRegister={toggleRegister} />
       ) : (
@@ -90,7 +90,7 @@ function Infobar() {
           <Footer />
         </>
       )}
-    </div>
+    </aside>
   );
 }
 

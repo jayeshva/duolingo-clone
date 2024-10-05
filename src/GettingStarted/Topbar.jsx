@@ -35,11 +35,7 @@ function Topbar() {
   }, []);
 
   const showDropdown = () => {
-    setDropdownOpen(true);
-  };
-
-  const hideDropdown = () => {
-    setDropdownOpen(false);
+    setDropdownOpen(!dropdownOpen);
   };
 
   return (
@@ -58,9 +54,18 @@ function Topbar() {
         />
 
         <div
-          className="relative"
+          className="relative hidden md:flex"
           onMouseEnter={showDropdown}
-          onMouseLeave={hideDropdown}
+          onMouseLeave={showDropdown}
+          aria-haspopup="true"
+          aria-expanded={dropdownOpen}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              showDropdown();
+            }
+          }}
         >
           <div className="flex items-center space-x-2 cursor-pointer">
             <span className="text-[#afafaf] bg-transparent font-din-round text-[15px] font-[700] leading-[17.25px] tracking-[0.8px] uppercase text-center">
@@ -86,7 +91,7 @@ function Topbar() {
           </div>
 
           {dropdownOpen && (
-            <div className="absolute right-0 mt-2 w-[300px] bg-white border border-gray-300 rounded-lg shadow-lg">
+            <div className="absolute right-0 mt-6 w-[300px] bg-white border border-gray-300 rounded-lg shadow-lg">
               <ul className="p-4 grid grid-cols-2 gap-2">
                 {languages.map((lang, index) => (
                   <li

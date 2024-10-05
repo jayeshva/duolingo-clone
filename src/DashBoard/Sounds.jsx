@@ -72,39 +72,41 @@ const LearnSounds = () => {
   const { title, subtitle, button, sections } = soundsData;
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex flex-col items-center p-8 ml-6">
-        <h1 className="text-2xl md:text-3xl font-bold mb-4 font-din-round text-[#4B4B4B] text-center">
+    <div className="flex flex-col items-center mt-12 mr-3">
+      <div className="flex flex-col items-center">
+        <h1 className="text-2xl md:text-[32px] font-bold mb-4 font-din-round text-[#4B4B4B] text-center">
           {title}
         </h1>
-        <p className="text-gray-500 mb-5 font-din-round-light text-lg text-center">
+        <p className="text-gray-500 mt-1 font-din-round-light text-[19px]  text-center">
           {subtitle}
         </p>
         <button
-          className="bg-[#1CB0F6] text-white shadow-[0_5px_0_#1999D6] font-din-round
-    text-[16px] font-bold px-28 py-[10px] rounded-2xl active:shadow-none active:translate-y-[5px] hover:bg-sky-400 transition"
+          className="bg-[#1CB0F6] mt-5 mb-8 text-white shadow-[0_4px_0_#1999D6] tracking-wide font-din-round
+    text-[16px] font-bold px-[115px] py-[10px] rounded-2xl active:shadow-none active:translate-y-[5px] hover:bg-sky-400 transition"
         >
           {button.label}
         </button>
       </div>
 
       {sections.map((section, index) => (
-        <div key={index} className="w-full text-center max-w-4xl ml-8">
+        <div key={index} className="flex flex-col items-center w-full text-center ">
           
-          <div className="flex items-center justify-center mt-5">
-            <div className="border-t-2 opacity-60 border-gray-300 w-full mx-2 ml-14"></div>
-            <h2 className="text-[20px] font-din-round text-[#4B4B4B] font-bold text-center">
+          <div className="flex items-center justify-center w-3/4 mt-5">
+            <div className="border-t-2 opacity-60 border-gray-300 w-3/4"></div>
+            <p className="text-[20px] px-4 font-din-round text-[#4B4B4B] font-bold text-center">
               {section.title}
-            </h2>
-            <div className="border-t-2 opacity-60 border-gray-300 w-full mx-2 mr-14"></div>
+            </p>
+            <div className="border-t-2 opacity-60 border-gray-300 w-3/4"></div>
           </div>
-          <div className="grid w-[478px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 ml-4 mt-4 mb-5">
+          <div className="grid w-[478px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-4 mb-5">
             {section.items.map((item, idx) => (
               <SoundCard key={idx} symbol={item.symbol} word={item.word} />
             ))}
           </div>
         </div>
       ))}
+    
+
     </div>
   );
 };

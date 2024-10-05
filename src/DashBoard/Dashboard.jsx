@@ -1,33 +1,24 @@
 import React from "react";
 import Sidebar from "./Sidebar";
-import { Routes, Route } from "react-router-dom";
-import Sounds from "./Sounds";
-import Learn from "./Learn";
+import { Outlet } from "react-router-dom"; 
 import Infobar from "./Infobar";
-import Leaderboards from "./Leaderboards";
-import Quests from "./Quests";
-import Shop from "./Shop";
-import Register from "../GettingStarted/Register";
 
 function Dashboard() {
   return (
-    <div className="flex justify-items-start h-screen">
-      <Sidebar />
-
-      <div className="ml-[400px] mt-5">
-        <Routes>
-          <Route path="learn" element={<Learn />} />
-          <Route path="sounds" element={<Sounds />} />
-          <Route path="leaderboards" element={<Leaderboards />} />
-          <Route path="quests" element={<Quests />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="profile" element={<Learn />} />
-          <Route path="more" element={<Learn />} />
-          <Route path="*" element={<Sounds />} />
-        </Routes>
+    <div className="grid grid-cols-12 h-screen">
+      <div className="col-span-2">
+        <Sidebar />
       </div>
 
-      <Infobar />
+      <div className="col-span-10 grid grid-cols-12">
+        <div className="col-span-7 pl-32">
+          <Outlet />
+        </div>
+
+        <div className="col-span-5 px-9">
+          <Infobar />
+        </div>
+      </div>
     </div>
   );
 }
