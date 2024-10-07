@@ -1,8 +1,20 @@
+import { useContext } from "react";
+import { GlobalContext } from "../../hooks/GlobalProvider";
+import { type } from "@testing-library/user-event/dist/type";
+
 const Register = ({toggleRegister}) => {
+  const {state,dispatch} = useContext(GlobalContext);
+  //   const handleLogin = () => {
+  //     dispatch({ type: "LOGIN" });
+  // };
+  
+  const handleRegister = () => {
+      dispatch({type:"DASHBOARD"});
+  };
     return (
       <div className="relative flex flex-col justify-center items-center min-h-screen bg-white">
         <div className="absolute top-4 left-4">
-          <button className="text-gray-400 hover:text-gray-600" onClick={toggleRegister}>
+          <button className="text-gray-400 hover:text-gray-600" onClick={handleRegister}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -20,7 +32,7 @@ const Register = ({toggleRegister}) => {
           </button>
         </div>
   
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 right-4" onClick={()=>{ dispatch({ type: "LOGIN" });}}>
           <button className="text-[#1CB0F6] shadow-[0_2px_0_#E5E5E5] font-bold font-din-round border-2 border-[#E5E5E5] rounded-xl p-3 hover:bg-gray-100 transition active:shadow-none active:translate-y-[5px] ">
             LOGIN
           </button>

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Scorecard from "./Scorecard";
-import Footer from "./Footer";
-import Register from "../GettingStarted/Register"; 
+import Footer from "../Footer";
+import Register from "../../gettingstarted/Authenticate/Register"; 
+import { GlobalContext } from "../../hooks/GlobalProvider";
 
 function Infobar() {
+  const {state, dispatch} = useContext(GlobalContext);
   const [showRegister, setShowRegister] = useState(false);
 
   const toggleRegister = () => {
@@ -12,10 +14,7 @@ function Infobar() {
 
   return (
     <aside className="flex-col p-4 pt-1 pl-0 w-[380px] fixed top-5 right-28 h-screen overflow-auto">
-      {showRegister ? (
-        <Register toggleRegister={toggleRegister} />
-      ) : (
-        <>
+     
           <Scorecard />
 
           <div className="bg-white rounded-2xl p-5 pt-4 pb-6 mb-4 border-2 border-[#E5E5E5]">
@@ -75,12 +74,17 @@ function Infobar() {
             </h2>
             <button
               type="submit"
+              onClick={()=>{
+                dispatch({type:"REGISTER"})
+              }} 
               className="tracking-wider bg-[#58cc05] text-white font-bold py-3 w-full rounded-2xl shadow-[0_5px_0_#58a700] font-din-round text-[14px] hover:bg-[#58cc02]/90 active:shadow-none active:translate-y-[5px] transition-all duration-150 ease-in-out"
             >
               CREATE A PROFILE
             </button>
             <button
-              onClick={toggleRegister} 
+              onClick={()=>{
+                dispatch({type:"LOGIN"})
+              }} 
               className="bg-[#1CB0F6] text-white tracking-wider shadow-[0_5px_0_#1999D6] font-din-round text-[14px] font-bold w-full mt-4 py-3 rounded-2xl active:shadow-none active:translate-y-[5px] hover:bg-sky-400 transition"
             >
               SIGN IN
@@ -88,8 +92,6 @@ function Infobar() {
           </div>
 
           <Footer />
-        </>
-      )}
     </aside>
   );
 }

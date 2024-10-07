@@ -1,0 +1,133 @@
+{
+    "sections": [
+      {
+        "id": 1,
+        "sectionName": "SECTION 1",
+        "unitName": "Discuss traveling solo",
+        "head": {
+          "content": "START",
+          "completed": false
+        },
+        "color": "tile-green",
+        "path": [
+          {
+            "type": "star",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ddd21f172a2db0f5ef169c09b4d3badb.svg",
+            "completed": false
+          },
+          {
+            "type": "star",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ddd21f172a2db0f5ef169c09b4d3badb.svg",
+            "completed": false
+          },
+          {
+            "type": "chest",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/b841637c196f5be786d8b8578a42ffbf.svg",
+            "completed": false
+          },
+          {
+            "type": "trophy",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/7d84afaa096ff1f1d3f8c86d6c2c9542.svg",
+            "completed": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "sectionName": "SECTION 1",
+        "unitName": "Order food delivery",
+        "color": "tile-purple",
+        "head": {
+          "content": "JUMP HERE?",
+          "completed": false
+        },
+        "path": [
+          {
+            "type": "star",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ddd21f172a2db0f5ef169c09b4d3badb.svg",
+            "completed": false
+          },
+          {
+            "type": "star",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ddd21f172a2db0f5ef169c09b4d3badb.svg",
+            "completed": false
+          },
+          {
+            "type": "chest",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/b841637c196f5be786d8b8578a42ffbf.svg",
+            "completed": false
+          },
+          {
+            "type": "trophy",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/7d84afaa096ff1f1d3f8c86d6c2c9542.svg",
+            "completed": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "sectionName": "SECTION 1",
+        "unitName": "Describe a day in college",
+        "color": "tile-caribbean-green",
+        "head": {
+          "content": "JUMP HERE?",
+          "completed": false
+        },
+        "path": [
+          {
+            "type": "star",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ddd21f172a2db0f5ef169c09b4d3badb.svg",
+            "completed": false
+          },
+          {
+            "type": "star",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ddd21f172a2db0f5ef169c09b4d3badb.svg",
+            "completed": false
+          },
+          {
+            "type": "chest",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/b841637c196f5be786d8b8578a42ffbf.svg",
+            "completed": false
+          },
+          {
+            "type": "trophy",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/7d84afaa096ff1f1d3f8c86d6c2c9542.svg",
+            "completed": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "sectionName": "SECTION 1",
+        "unitName": "Discuss your work experience",
+        "head": {
+          "content": "JUMP HERE?",
+          "completed": false
+        },
+        "color": "tile-pink",
+        "path": [
+          {
+            "type": "star",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ddd21f172a2db0f5ef169c09b4d3badb.svg",
+            "completed": false
+          },
+          {
+            "type": "star",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ddd21f172a2db0f5ef169c09b4d3badb.svg",
+            "completed": false
+          },
+          {
+            "type": "chest",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/b841637c196f5be786d8b8578a42ffbf.svg",
+            "completed": false
+          },
+          {
+            "type": "trophy",
+            "url": "https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/7d84afaa096ff1f1d3f8c86d6c2c9542.svg",
+            "completed": false
+          }
+        ]
+      }
+    ]
+  }
+  

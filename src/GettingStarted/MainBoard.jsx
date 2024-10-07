@@ -1,7 +1,7 @@
 import React from "react";
 import Topbar from "./Topbar";
-import BottomBar from "./BottomBar";
-import Welcome from "./Welcome";
+import BottomBar from "./BottomBar/BottomBar";
+import Welcome from "./Welcome/Welcome";
 
 function MainBoard() {
   return (

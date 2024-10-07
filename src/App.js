@@ -1,25 +1,36 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NotFound from "./GettingStarted/NotFound";
-import MainBoard from "./GettingStarted/MainBoard";
-import Dashboard from "./DashBoard/Dashboard"; // Layout with Outlet
-import Learn from "./DashBoard/Learn"; // Dynamic Components
-import Sounds from "./DashBoard/Sounds";
-import Leaderboards from "./DashBoard/Leaderboards";
-import Quests from "./DashBoard/Quests";
-import Shop from "./DashBoard/Shop";
-import Profile from "./DashBoard/Profile";
-import Register from "./GettingStarted/Register";
+import { QueryClient, QueryClientProvider } from 'react-query';
+import NotFound from "./gettingstarted/NotFound";
+import MainBoard from "./gettingstarted/MainBoard";
+import Dashboard from "./dashboard/Dashboard"; 
+import {Learn} from "./dashboard/Learn/Learn"; 
+import Sounds from "./dashboard/Sounds/Sounds";
+import Leaderboards from "./dashboard/Leaderboards";
+import Quests from "./dashboard/Quests";
+import Shop from "./dashboard/Shop";
+import Profile from "./dashboard/Profile";
+import 'font-awesome/css/font-awesome.min.css';
+import Register from "./gettingstarted/Authenticate/Register";
+import DuolingoLoading from "./animations/DuolingoLoading";
+import GlobalProvider from "./hooks/GlobalProvider";
+import { QueryLearn } from "./reactQuery/QueryLearn";
 
 function App() {
+  const queryClient = new QueryClient({
+    defaultOptions: { queries: { retry: 1 } },
+  });
+
   return (
-    <div>
+     <QueryClientProvider client={queryClient}>
+    <GlobalProvider>
+       <div>
       <Router>
         <Routes>
           <Route path="/" element={<MainBoard />} />
           <Route path="/register" element={<Register />} />
           <Route path="/learn" element={<Dashboard />}>
-            <Route index element={<Learn />} />
+            <Route index element={<QueryLearn />} />
           </Route>
           <Route path="/sounds" element={<Dashboard />}>
             <Route index element={<Sounds />} /> 
@@ -28,22 +39,25 @@ function App() {
             <Route index element={<Leaderboards />} /> 
           </Route>
           <Route path="/quests" element={<Dashboard />}>
-            <Route index element={<Quests />} /> 
+            <Route index element={<DuolingoLoading />} /> 
           </Route>
           <Route path="/shop" element={<Dashboard />}>
-            <Route index element={<Shop />} /> 
+            <Route index element={<DuolingoLoading />} /> 
           </Route>
           <Route path="/profile" element={<Dashboard />}>
-            <Route index element={<Profile />} /> 
+            <Route index element={<DuolingoLoading />} /> 
           </Route>
           <Route path="/more" element={<Dashboard />}>
-            <Route index element={<Profile />} /> 
+            <Route index element={<DuolingoLoading />} /> 
           </Route>
 
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<DuolingoLoading />} />
         </Routes>
       </Router>
     </div>
+    </GlobalProvider>
+    </QueryClientProvider>
+   
   );
 }
 
